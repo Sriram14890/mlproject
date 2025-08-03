@@ -26,7 +26,7 @@ class DataTransformation:
         This Function is responsible for Data Transformation 
         '''    
         try:
-            num_cols=["writing score", "reading score"]
+            num_cols=["writing_score", "reading_score"]
             cat_cols=[
                 "gender",
                 "race_ethnicity",
@@ -43,7 +43,7 @@ class DataTransformation:
 
             cat_pipeline=Pipeline([
                 ("Imputer", SimpleImputer(strategy="most_frequent")),
-                ("One Hot Encoder", OneHotEncoder()),
+                ("One Hot Encoder", OneHotEncoder())
                 
             
             ])
